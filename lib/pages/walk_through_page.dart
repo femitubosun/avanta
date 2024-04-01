@@ -1,3 +1,4 @@
+import 'package:avanta/pages/signup_page.dart';
 import 'package:avanta/shared/colors.dart';
 import 'package:avanta/shared/custom_button.dart';
 import 'package:flutter/material.dart';
@@ -54,12 +55,15 @@ class WalkthroughPage extends StatelessWidget {
                   const SizedBox(
                     height: 24,
                   ),
-                  const Align(
+                  Align(
                     alignment: Alignment.bottomRight,
                     child: SizedBox(
                       width: 81,
                       child: CustomButton(
                         text: "Next",
+                        onTap: () {
+                          Navigator.pushNamed(context, SignupPage.routeName);
+                        },
                       ),
                     ),
                   )
